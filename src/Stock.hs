@@ -1,0 +1,2 @@
+module Stock where
+
