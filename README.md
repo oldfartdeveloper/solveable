@@ -37,4 +37,4 @@ Follow the instructions here (MacOS specific):
 
 After about 10 minutes, it completed (including taking the time to answer the questions).
 
-### Install Solitaire program.
+### Install Solitaire program
