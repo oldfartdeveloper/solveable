@@ -72,6 +72,11 @@ data Color
   | Red
   deriving (Eq, Show)
 
+{- Answers a deck of 52 sorted cards.
+   Sorted ascending Ace through King
+   for clubs, then for diamonds, then
+   for hearts, and finally for spades
+ -}
 deck :: [Card] -- Cards are zero-indexed
 deck =
   [ Card { suit = suit
@@ -85,6 +90,15 @@ deck =
       getColor Club = Black 
       getColor Spade = Black
       getColor _ = Red
+
+{- Answers the i't index (index 1)
+   of the sorted cards in a deck.
+ -}
+atIndex :: Int -> Maybe Card
+atIndex i = 
+  if i >= 1 && i <= 52
+  then Just (deck !! (i - 1))
+  else Nothing
 
 oppositeColor :: Color -> Color
 oppositeColor Black = Red
